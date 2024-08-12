@@ -9,7 +9,9 @@ class Screen_3X5:
 
     def __str__(self):
         # Create a string representation of the 3x5 grid
-        text = "\n".join(["|".join(self.rows[i]) for i in range(3)])
+        text = "\n".join([f"|{'|'.join(self.rows[i])}|" for i in range(3)])
+        text = "\n" + text
+        
         return text
 
     def spin_row(self):
@@ -43,7 +45,9 @@ class Screen_3X5:
             WIN += self.calculate_jackpot(self.rows[0][0], bet)
 
         if WIN == 0:
-            print("Unlucky spin")
+            print("\nUnlucky spin")
+            print("\033[32m-----------------------------\033[0m")
+
 
         return WIN
 

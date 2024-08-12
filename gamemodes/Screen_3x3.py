@@ -22,7 +22,7 @@ class Screen_3X3:
         self.row3 = self.spin_row()
 
     def __str__(self):
-        text = f"|{self.row1[1]}|{self.row1[3]}|{self.row1[5]}|\n|{self.row2[1]}|{self.row2[3]}|{self.row2[5]}|\n|{self.row3[1]}|{self.row3[3]}|{self.row3[5]}|"
+        text = f"\n|{self.row1[1]}|{self.row1[3]}|{self.row1[5]}|\n|{self.row2[1]}|{self.row2[3]}|{self.row2[5]}|\n|{self.row3[1]}|{self.row3[3]}|{self.row3[5]}|"
         return text
     def spin_row(self):
         first = random.choice(self.symbols)
@@ -135,6 +135,8 @@ class Screen_3X3:
 
         if WIN == 0:
             print("\nUnlucky spin")
+            print("\033[32m-----------------------------\033[0m")
+
 
 
 
