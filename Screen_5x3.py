@@ -2,7 +2,7 @@ import random
 
 class Screen_3X5:
 
-    symbols = ["💎", "🔔", "🏳️‍🌈", "🍋", "💣"]
+    symbols = ["💎", "🔔", "🌹", "🍋", "💣"]
 
     def __init__(self):
         self.rows = [self.spin_row() for _ in range(3)]  # Create 3 rows, each with 5 columns
@@ -52,7 +52,7 @@ class Screen_3X5:
             return bet * 10
         elif symbol == "🔔":
             return bet * 6
-        elif symbol == "🏳️‍🌈":
+        elif symbol == "🌹":
             return bet * 4
         elif symbol in ["🍋", "💣"]:
             return bet * 2
@@ -63,7 +63,7 @@ class Screen_3X5:
             return bet * 200
         elif symbol == "🔔":
             return bet * 120
-        elif symbol == "🏳️‍🌈":
+        elif symbol == "🌹":
             return bet * 50
         elif symbol in ["🍋", "💣"]:
             return bet * 40

@@ -2,7 +2,7 @@
 
 
 """ 
-diamant > bell > radioactive > lemon > bomb
+diamant > bell > rose > lemon > bomb
 
 diamant X5
 bell X3
@@ -38,7 +38,7 @@ class Screen_3X3:
                 WIN += bet * 10
             elif self.row1[1] == "🔔":
                 WIN += bet * 6
-            elif self.row1[1] == "🏳️‍🌈":
+            elif self.row1[1] == "🌹":
                 WIN += bet * 4
             elif self.row1[1] in ["🍋", "💣"]:
                 WIN += bet * 2
@@ -49,7 +49,7 @@ class Screen_3X3:
                 WIN += bet * 10
             elif self.row1[5] == "🔔":
                 WIN += bet * 6
-            elif self.row1[5] == "🏳️‍🌈":
+            elif self.row1[5] == "🌹":
                 WIN += bet * 4
             elif self.row1[5] in ["🍋", "💣"]:
                 WIN += bet * 2
@@ -61,7 +61,7 @@ class Screen_3X3:
                 WIN += bet * 10
             elif self.row1[1] == "🔔":
                 WIN += bet * 6
-            elif self.row1[1] == "🏳️‍🌈":
+            elif self.row1[1] == "🌹":
                 WIN += bet * 4
             elif self.row1[1] in ["🍋", "💣"]:
                 WIN += bet * 2
@@ -72,7 +72,7 @@ class Screen_3X3:
                 WIN += bet * 10
             elif self.row2[1] == "🔔":
                 WIN += bet * 6
-            elif self.row2[1] == "🏳️‍🌈":
+            elif self.row2[1] == "🌹":
                 WIN += bet * 4
             elif self.row2[1] in ["🍋", "💣"]:
                 WIN += bet * 2
@@ -83,7 +83,7 @@ class Screen_3X3:
                 WIN += bet * 10
             elif self.row3[1] == "🔔":
                 WIN += bet * 6
-            elif self.row3[1] == "🏳️‍🌈":
+            elif self.row3[1] == "🌹":
                 WIN += bet * 4
             elif self.row3[1] in ["🍋", "💣"]:
                 WIN += bet * 2
@@ -95,7 +95,7 @@ class Screen_3X3:
                 WIN += bet * 10
             elif self.row1[1] == "🔔":
                 WIN += bet * 6
-            elif self.row1[1] == "🏳️‍🌈":
+            elif self.row1[1] == "🌹":
                 WIN += bet * 4
             elif self.row1[1] in ["🍋", "💣"]:
                 WIN += bet * 2
@@ -106,7 +106,7 @@ class Screen_3X3:
                 WIN += bet * 10
             elif self.row1[3] == "🔔":
                 WIN += bet * 6
-            elif self.row1[3] == "🏳️‍🌈":
+            elif self.row1[3] == "🌹":
                 WIN += bet * 4
             elif self.row1[3] in ["🍋", "💣"]:
                 WIN += bet * 2
@@ -117,7 +117,7 @@ class Screen_3X3:
                 WIN += bet * 10
             elif self.row1[5] == "🔔":
                 WIN += bet * 6
-            elif self.row1[5] == "🏳️‍🌈":
+            elif self.row1[5] == "🌹":
                 WIN += bet * 4
             elif self.row1[5] in ["🍋", "💣"]:
                 WIN += bet * 2
@@ -128,7 +128,7 @@ class Screen_3X3:
                 WIN += bet * 200
             elif self.row1[1] == "🔔":
                 WIN += bet * 120
-            elif self.row1[1] == "🏳️‍🌈":
+            elif self.row1[1] == "🌹":
                 WIN += bet * 50
             elif self.row1[1] in ["🍋", "💣"]:
                 WIN += bet * 40
