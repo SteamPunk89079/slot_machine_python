@@ -21,32 +21,153 @@ class Screen_3X5:
     def check_screen(self, bet):
         WIN = 0
 
-        # DIAGONAL CHECKS
-        # Diagonal 1 (top-left to bottom-right)
-        if self.rows[0][0] == self.rows[1][2] == self.rows[2][4]:
-            WIN += self.calculate_win(self.rows[0][0], bet)
+        symbols = ["💎", "🔔", "🌹", "🍋", "💣"]
 
-        # Diagonal 2 (top-right to bottom-left)
-        if self.rows[0][4] == self.rows[1][2] == self.rows[2][0]:
-            WIN += self.calculate_win(self.rows[0][4], bet)
+    def __init__(self):
+        self.row1 = self.spin_row()
+        self.row2 = self.spin_row()
+        self.row3 = self.spin_row()
 
-        # ROW CHECKS
-        for row in self.rows:
-            if row[0] == row[1] == row[2] == row[3] == row[4]:
-                WIN += self.calculate_win(row[0], bet)
+    def __str__(self):
+        text = f"\n|{self.row1[1]}|{self.row1[3]}|{self.row1[5]}|\n|{self.row2[1]}|{self.row2[3]}|{self.row2[5]}|\n|{self.row3[1]}|{self.row3[3]}|{self.row3[5]}|"
+        return text
+    def spin_row(self):
+        first = random.choice(self.symbols)
+        second = random.choice(self.symbols)
+        third = random.choice(self.symbols)
+        forth = random.choice(self.symbols)
+        fifth = random.choice(self.symbols)
+        return "|" + first + "|" + second + "|" + third + "|" + forth + "|" + fifth + "|"
+    def check_screen(self, bet):
+        WIN = 0
+        # DIAG CHECK
+        # diag 1
+        if self.row1[1] == self.row1[3] == self.row2[5] == self.row3[7] == self.row3[9]:
+            if self.row1[1] == "💎":
+                WIN += bet * 13
+            elif self.row1[1] == "🔔":
+                WIN += bet * 9
+            elif self.row1[1] == "🌹":
+                WIN += bet * 7
+            elif self.row1[1] in ["🍋", "💣"]:
+                WIN += bet * 5
 
-        # COLUMN CHECKS
-        for col in range(5):
-            if self.rows[0][col] == self.rows[1][col] == self.rows[2][col]:
-                WIN += self.calculate_win(self.rows[0][col], bet)
+        # diag 2
+        if self.row3[1] == self.row3[3] == self.row2[5] == self.row1[7] == self.row1[9]:
+            if self.row1[9] == "💎":
+                WIN += bet * 13
+            elif self.row1[9] == "🔔":
+                WIN += bet * 9
+            elif self.row1[9] == "🌹":
+                WIN += bet * 7
+            elif self.row1[9] in ["🍋", "💣"]:
+                WIN += bet * 5
+
+        # LINE CHECK
+        # line 1
+        if self.row1[1] == self.row1[3] == self.row1[5] == self.row1[7] == self.row1[9]:
+            if self.row1[1] == "💎":
+                WIN += bet * 13
+            elif self.row1[1] == "🔔":
+                WIN += bet * 9
+            elif self.row1[1] == "🌹":
+                WIN += bet * 7
+            elif self.row1[1] in ["🍋", "💣"]:
+                WIN += bet * 5
+
+        # line 2
+        if self.row2[1] == self.row2[3] == self.row2[5] == self.row2[7] == self.row2[9]:
+            if self.row2[1] == "💎":
+                WIN += bet * 13
+            elif self.row2[1] == "🔔":
+                WIN += bet * 9
+            elif self.row2[1] == "🌹":
+                WIN += bet * 7
+            elif self.row2[1] in ["🍋", "💣"]:
+                WIN += bet * 5
+
+        # line 3
+        if self.row3[1] == self.row3[3] == self.row3[5] == self.row3[7] == self.row3[9]:
+            if self.row3[1] == "💎":
+                WIN += bet * 13
+            elif self.row3[1] == "🔔":
+                WIN += bet * 9
+            elif self.row3[1] == "🌹":
+                WIN += bet * 7
+            elif self.row3[1] in ["🍋", "💣"]:
+                WIN += bet * 5
+
+        # COLUMN CHECK
+        # column 1
+        if self.row1[1] == self.row2[1] == self.row3[1]:
+            if self.row1[1] == "💎":
+                WIN += bet * 5
+            elif self.row1[1] == "🔔":
+                WIN += bet * 3
+            elif self.row1[1] == "🌹":
+                WIN += bet * 2
+            elif self.row1[1] in ["🍋", "💣"]:
+                WIN += bet * 2
+
+        # column 2
+        if self.row1[3] == self.row2[3] == self.row3[3]:
+            if self.row1[3] == "💎":
+                WIN += bet * 5
+            elif self.row1[3] == "🔔":
+                WIN += bet * 3
+            elif self.row1[3] == "🌹":
+                WIN += bet * 2
+            elif self.row1[3] in ["🍋", "💣"]:
+                WIN += bet * 2
+
+        # column 3
+        if self.row1[5] == self.row2[5] == self.row3[5]:
+            if self.row1[5] == "💎":
+                WIN += bet * 5
+            elif self.row1[5] == "🔔":
+                WIN += bet * 3
+            elif self.row1[5] == "🌹":
+                WIN += bet * 2
+            elif self.row1[5] in ["🍋", "💣"]:
+                WIN += bet * 2
+        
+        # column 4
+        if self.row1[7] == self.row2[7] == self.row3[7]:
+            if self.row1[7] == "💎":
+                WIN += bet * 5
+            elif self.row1[7] == "🔔":
+                WIN += bet * 3
+            elif self.row1[7] == "🌹":
+                WIN += bet * 2
+            elif self.row1[7] in ["🍋", "💣"]:
+                WIN += bet * 2
+
+        # column 5
+        if self.row1[9] == self.row2[9] == self.row3[9]:
+            if self.row1[9] == "💎":
+                WIN += bet * 5
+            elif self.row1[9] == "🔔":
+                WIN += bet * 3
+            elif self.row1[9] == "🌹":
+                WIN += bet * 2
+            elif self.row1[9] in ["🍋", "💣"]:
+                WIN += bet * 2
 
         # JACKPOT CHECK
-        if all(self.rows[i][j] == self.rows[0][0] for i in range(3) for j in range(5)):
-            WIN += self.calculate_jackpot(self.rows[0][0], bet)
+        if self.row1[1] == self.row1[3] == self.row1[5] == self.row1[7] == self.row1[9] == self.row2[1] == self.row2[3] == self.row2[5] == self.row2[7] == self.row2[9] == self.row3[1] == self.row3[3] == self.row3[5] == self.row3[7] == self.row3[9]:
+            if self.row1[1] == "💎":
+                WIN += bet * 300
+            elif self.row1[1] == "🔔":
+                WIN += bet * 220
+            elif self.row1[1] == "🌹":
+                WIN += bet * 100
+            elif self.row1[1] in ["🍋", "💣"]:
+                WIN += bet * 80
 
         if WIN == 0:
             print("\nUnlucky spin")
             print("\033[32m-----------------------------\033[0m")
+
 
 
         return WIN

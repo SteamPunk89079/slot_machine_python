@@ -2,6 +2,7 @@
 from gamemodes.Screen_3x3 import Screen_3X3
 from gamemodes.Screen_5x3 import Screen_3X5
 
+import sys
 
 
 def color_text(text):
@@ -24,8 +25,10 @@ def main():
     balance = 100
     
     while True:
-        my_input = input("  Choose gamemode \n (1) 3 x 3  (2) 5 x 3: ")
-        if my_input in ['1', '2']:
+        my_input = input("  Choose gamemode \n (1) 3 x 3  (2) 5 x 3    (Q) Quit")
+        if my_input in ['1', '2', 'Q', 'q']:
+
+            #3x3
             if my_input == '1':
                 print("-----------------------------------")
                 print("\033[32m--------WELCOME-TO-3x3-slots-------\033[0m")    
@@ -55,6 +58,7 @@ def main():
                         text = "\n !!!YOU WON "+str(win)+"!!!"
                         print(color_text(text))
                         print("\033[32m-----------------------------\033[0m")
+            #3x5            
             if my_input == '2':
                 print("-----------------------------------")
                 print("\033[32m--------WELCOME-TO-3x5-slots-------\033[0m")    
@@ -84,8 +88,11 @@ def main():
                         text = "\n !!!YOU WON "+str(win)+"!!!"
                         print(color_text(text))
                         print("\033[32m-----------------------------\033[0m")
+
+            if my_input == 'q' or my_input == 'Q':
+                sys.exit()
         else:
-            print("  Invalid input. Please choose (1) for 3 x 3 or (2) for 5 x 3.")
+            print("  Invalid input. Please choose (1) for 3 x 3 or (2) for 5 x 3.         (Q) Quit")
 
 
     
