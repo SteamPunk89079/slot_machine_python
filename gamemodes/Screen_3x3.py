@@ -12,6 +12,7 @@ lemon ,bomb X1
 
 import random
 
+
 class Screen_3X3:
 
     symbols = ["💎", "🔔", "🌹", "🍋", "💣"]

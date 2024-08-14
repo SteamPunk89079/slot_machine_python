@@ -2,6 +2,8 @@
 from gamemodes.Screen_3x3 import Screen_3X3
 from gamemodes.Screen_5x3 import Screen_3X5
 
+from playsound import playsound
+
 import sys
 
 

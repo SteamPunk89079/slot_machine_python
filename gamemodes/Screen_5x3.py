@@ -29,7 +29,7 @@ class Screen_3X5:
         self.row3 = self.spin_row()
 
     def __str__(self):
-        text = f"\n|{self.row1[1]}|{self.row1[3]}|{self.row1[5]}|\n|{self.row2[1]}|{self.row2[3]}|{self.row2[5]}|\n|{self.row3[1]}|{self.row3[3]}|{self.row3[5]}|"
+        text = f"\n|{self.row1[1]}|{self.row1[3]}|{self.row1[5]}|{self.row1[7]}|{self.row1[9]}|\n|{self.row2[1]}|{self.row2[3]}|{self.row2[5]}|{self.row2[7]}|{self.row2[9]}|\n|{self.row3[1]}|{self.row3[3]}|{self.row3[5]}|{self.row3[7]}|{self.row3[9]}|"
         return text
     def spin_row(self):
         first = random.choice(self.symbols)
