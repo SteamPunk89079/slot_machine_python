@@ -2,8 +2,6 @@
 from gamemodes.Screen_3x3 import Screen_3X3
 from gamemodes.Screen_5x3 import Screen_3X5
 
-from playsound import playsound
-
 import sys
 
 
@@ -26,6 +24,10 @@ def main():
 
     balance = 100
     
+
+
+
+
     while True:
         my_input = input("  Choose gamemode \n (1) 3 x 3  (2) 5 x 3    (Q) Quit")
         if my_input in ['1', '2', 'Q', 'q']:
